@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PasscodeCell" customModule="Private_Photos" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PasscodeCell" id="cAZ-fQ-ylY" customClass="PasscodeCell" customModule="Private_Photos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dpT-wM-mWN">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZH-Ll-Uyj">
+                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TZH-Ll-Uyj" secondAttribute="height" multiplier="1:1" id="9RB-g6-fG8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal" title="1">
+                            <color key="titleColor" red="0.26183719150000001" green="0.37567030620000003" blue="0.4219939721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TZH-Ll-Uyj" firstAttribute="centerY" secondItem="dpT-wM-mWN" secondAttribute="centerY" id="DxF-fK-Tcs"/>
+                    <constraint firstItem="TZH-Ll-Uyj" firstAttribute="centerX" secondItem="dpT-wM-mWN" secondAttribute="centerX" id="Iy4-cK-bdB"/>
+                    <constraint firstItem="TZH-Ll-Uyj" firstAttribute="width" secondItem="dpT-wM-mWN" secondAttribute="width" multiplier="0.8" id="rp5-QF-WeM"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="124" height="120"/>
+            <connections>
+                <outlet property="button" destination="TZH-Ll-Uyj" id="fZs-4A-Wj8"/>
+            </connections>
+            <point key="canvasLocation" x="638" y="-228"/>
+        </collectionViewCell>
+    </objects>
+</document>

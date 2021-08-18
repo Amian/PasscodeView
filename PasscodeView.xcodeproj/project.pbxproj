@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */; };
+		F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */; };
+		F781ABFC26CD4E12001B84D7 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */; };
+		F781ABFD26CD4E12001B84D7 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781ABF926CD4E12001B84D7 /* ProgressIndicator.swift */; };
+		F781ABFF26CD4E3C001B84D7 /* PasscodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781ABFE26CD4E3C001B84D7 /* PasscodeCell.swift */; };
 		F7D501FF26C574DB00E268A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D501FE26C574DB00E268A5 /* AppDelegate.swift */; };
 		F7D5020126C574DB00E268A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D5020026C574DB00E268A5 /* SceneDelegate.swift */; };
 		F7D5020326C574DB00E268A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D5020226C574DB00E268A5 /* ViewController.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeViewController.xib; sourceTree = "<group>"; };
+		F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeCell.xib; sourceTree = "<group>"; };
+		F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		F781ABF926CD4E12001B84D7 /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		F781ABFE26CD4E3C001B84D7 /* PasscodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeCell.swift; sourceTree = "<group>"; };
 		F7D501FB26C574DB00E268A5 /* PasscodeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasscodeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D501FE26C574DB00E268A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D5020026C574DB00E268A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F781ABF526CD4E12001B84D7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */,
+				F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */,
+				F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */,
+				F781ABF926CD4E12001B84D7 /* ProgressIndicator.swift */,
+				F781ABFE26CD4E3C001B84D7 /* PasscodeCell.swift */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
 		F7D501F226C574DB00E268A5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,7 @@
 		F7D501FD26C574DB00E268A5 /* PasscodeView */ = {
 			isa = PBXGroup;
 			children = (
+				F781ABF526CD4E12001B84D7 /* src */,
 				F7D501FE26C574DB00E268A5 /* AppDelegate.swift */,
 				F7D5020026C574DB00E268A5 /* SceneDelegate.swift */,
 				F7D5020226C574DB00E268A5 /* ViewController.swift */,
@@ -231,7 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */,
 				F7D5020B26C574DE00E268A5 /* LaunchScreen.storyboard in Resources */,
+				F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */,
 				F7D5020826C574DE00E268A5 /* Assets.xcassets in Resources */,
 				F7D5020626C574DB00E268A5 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781ABFC26CD4E12001B84D7 /* PasscodeViewController.swift in Sources */,
 				F7D5020326C574DB00E268A5 /* ViewController.swift in Sources */,
 				F7D501FF26C574DB00E268A5 /* AppDelegate.swift in Sources */,
+				F781ABFD26CD4E12001B84D7 /* ProgressIndicator.swift in Sources */,
 				F7D5020126C574DB00E268A5 /* SceneDelegate.swift in Sources */,
+				F781ABFF26CD4E3C001B84D7 /* PasscodeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

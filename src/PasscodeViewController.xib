@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PasscodeViewController" customModule="PasscodeView" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="aUR-0e-Lto" id="B3J-nL-MdC"/>
+                <outlet property="imageView" destination="fcy-EA-t6Y" id="fGi-qG-wtE"/>
+                <outlet property="progressStackView" destination="9l0-BE-t7a" id="8rX-n1-VEk"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Nwj-fF-urF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-EA-t6Y">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aUR-0e-Lto">
+                    <rect key="frame" x="30" y="368" width="354" height="368"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s7l-Uz-L0d">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2MN-eQ-v46"/>
+                        <outlet property="delegate" destination="-1" id="JgP-C7-IuS"/>
+                    </connections>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9l0-BE-t7a" customClass="ProgressIndicatorStackView" customModule="PasscodeView" customModuleProvider="target">
+                    <rect key="frame" x="149.66666666666666" y="323" width="114.99999999999997" height="15"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkQ-Ct-JTh" customClass="CircleView" customModule="PasscodeView" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="J9Z-80-DiA"/>
+                                <constraint firstAttribute="width" constant="15" id="m78-MJ-i9B"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-I8-6kP" customClass="CircleView" customModule="PasscodeView" customModuleProvider="target">
+                            <rect key="frame" x="25" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-ZQ-J7f" customClass="CircleView" customModule="PasscodeView" customModuleProvider="target">
+                            <rect key="frame" x="50" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wt-Iq-Vjr" customClass="CircleView" customModule="PasscodeView" customModuleProvider="target">
+                            <rect key="frame" x="75" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-qT-QKW" customClass="CircleView" customModule="PasscodeView" customModuleProvider="target">
+                            <rect key="frame" x="100" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="HdS-2A-HxG"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="circles" destination="EkQ-Ct-JTh" collectionClass="NSMutableArray" id="qQX-is-lm4"/>
+                        <outletCollection property="circles" destination="Cce-I8-6kP" collectionClass="NSMutableArray" id="Uz3-DJ-cKN"/>
+                        <outletCollection property="circles" destination="5ft-ZQ-J7f" collectionClass="NSMutableArray" id="nzn-Ti-2va"/>
+                        <outletCollection property="circles" destination="5wt-Iq-Vjr" collectionClass="NSMutableArray" id="YGH-Xd-dRl"/>
+                        <outletCollection property="circles" destination="gLM-qT-QKW" collectionClass="NSMutableArray" id="Sc5-aA-afb"/>
+                    </connections>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your 5 digit passcode to login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pve-be-585">
+                    <rect key="frame" x="16" y="0.0" width="382" height="307"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <constraints>
+                <constraint firstItem="pve-be-585" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="0fB-Bc-8Qd"/>
+                <constraint firstItem="9l0-BE-t7a" firstAttribute="top" secondItem="pve-be-585" secondAttribute="bottom" constant="16" id="45z-8a-JTb"/>
+                <constraint firstItem="fcy-EA-t6Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7hU-5O-SrC"/>
+                <constraint firstItem="aUR-0e-Lto" firstAttribute="top" secondItem="9l0-BE-t7a" secondAttribute="bottom" constant="30" id="Ecc-6j-ODz"/>
+                <constraint firstItem="aUR-0e-Lto" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="JGB-dw-ZuH"/>
+                <constraint firstItem="aUR-0e-Lto" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="JKV-Py-vZP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aUR-0e-Lto" secondAttribute="bottom" id="LMe-Fv-e0a"/>
+                <constraint firstItem="9l0-BE-t7a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nsw-Ja-DtD"/>
+                <constraint firstItem="fcy-EA-t6Y" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="blY-gm-wfL"/>
+                <constraint firstItem="fcy-EA-t6Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tev-Xj-nbw"/>
+                <constraint firstItem="pve-be-585" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="tlo-aL-God"/>
+                <constraint firstItem="pve-be-585" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="wx9-ga-FsA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aUR-0e-Lto" secondAttribute="trailing" constant="30" id="xEq-dH-qHw"/>
+                <constraint firstItem="fcy-EA-t6Y" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="y9j-QQ-lI7"/>
+            </constraints>
+            <point key="canvasLocation" x="-170" y="84"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
