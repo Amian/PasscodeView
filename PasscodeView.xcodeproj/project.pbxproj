@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7031BB026F7F626004687C5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F7031BAF26F7F626004687C5 /* LICENSE */; };
 		F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */; };
 		F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */; };
 		F781ABFC26CD4E12001B84D7 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7031BAF26F7F626004687C5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeViewController.xib; sourceTree = "<group>"; };
 		F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeCell.xib; sourceTree = "<group>"; };
 		F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		F7D501F226C574DB00E268A5 = {
 			isa = PBXGroup;
 			children = (
+				F7031BAF26F7F626004687C5 /* LICENSE */,
 				F7D501FD26C574DB00E268A5 /* PasscodeView */,
 				F7D5021426C574DE00E268A5 /* PasscodeViewTests */,
 				F7D5021F26C574DE00E268A5 /* PasscodeViewUITests */,
@@ -254,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7031BB026F7F626004687C5 /* LICENSE in Resources */,
 				F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */,
 				F7D5020B26C574DE00E268A5 /* LaunchScreen.storyboard in Resources */,
 				F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */,
@@ -394,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -449,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
