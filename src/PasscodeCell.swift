@@ -11,6 +11,13 @@ class PasscodeCell: UICollectionViewCell {
     
     @IBOutlet private var button: UIButton!
     
+    var digit: Int {
+        get {
+            guard let text = button.titleLabel?.text else { return 0 }
+            return Int(text) ?? 0
+        }
+    }
+    
     func configure(with number: Int) {
         button.setTitle(String(number), for: .normal)
         button.isHidden = false

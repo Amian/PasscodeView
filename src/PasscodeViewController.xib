@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="collectionView" destination="aUR-0e-Lto" id="B3J-nL-MdC"/>
                 <outlet property="imageView" destination="fcy-EA-t6Y" id="fGi-qG-wtE"/>
+                <outlet property="label" destination="pve-be-585" id="aij-mX-tQ3"/>
                 <outlet property="progressStackView" destination="9l0-BE-t7a" id="8rX-n1-VEk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Nwj-fF-urF"/>
             </connections>
@@ -84,13 +85,6 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="HdS-2A-HxG"/>
                     </constraints>
-                    <connections>
-                        <outletCollection property="circles" destination="EkQ-Ct-JTh" collectionClass="NSMutableArray" id="qQX-is-lm4"/>
-                        <outletCollection property="circles" destination="Cce-I8-6kP" collectionClass="NSMutableArray" id="Uz3-DJ-cKN"/>
-                        <outletCollection property="circles" destination="5ft-ZQ-J7f" collectionClass="NSMutableArray" id="nzn-Ti-2va"/>
-                        <outletCollection property="circles" destination="5wt-Iq-Vjr" collectionClass="NSMutableArray" id="YGH-Xd-dRl"/>
-                        <outletCollection property="circles" destination="gLM-qT-QKW" collectionClass="NSMutableArray" id="Sc5-aA-afb"/>
-                    </connections>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your 5 digit passcode to login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pve-be-585">
                     <rect key="frame" x="16" y="0.0" width="382" height="307"/>

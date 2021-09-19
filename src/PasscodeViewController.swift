@@ -8,29 +8,60 @@
 import UIKit
 import LocalAuthentication
 
+protocol PasscodeViewControllerDelegate {
+    func passcodeController(_ controller: PasscodeViewController, didEnterPasscode passcode: String)
+}
+
+private struct PasscodeViewConfig {
+    var label: String
+    var numberOfDigits: Int
+    var backgroundColour: UIColor
+    var backgroundImage: UIImage?
+}
+
 class PasscodeViewController: UIViewController {
-    
+        
     private let CELL_IDENTIFIER = "PasscodeCell"
-    private let MAX_DIGITS_ALLOWED = 5
+    private var config: PasscodeViewConfig?
+    private var delegate: PasscodeViewControllerDelegate?
+    private var passcode: String = ""
     
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var progressStackView: ProgressIndicatorStackView!
-    
-    private var progress = 0
+    @IBOutlet private var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: CELL_IDENTIFIER, bundle: nil), forCellWithReuseIdentifier: CELL_IDENTIFIER)
-        setBackgroundGif()
-        progressStackView.updateProgress(progress)
+        progressStackView.updateProgress(0)
+//        configure()
+    }
+    
+    // MARK: Public methods
+    
+    func configure(with label: String = "Enter Passcode", numberOfDigits: Int = 4, backgroundColour: UIColor = .white, backgroundImage: UIImage? = nil, delegate: PasscodeViewControllerDelegate? = nil) {
+        self.config = PasscodeViewConfig(label: label, numberOfDigits: numberOfDigits, backgroundColour: backgroundColour, backgroundImage: backgroundImage)
+        self.delegate = delegate
+        updateView()
+    }
+    
+    func showIncorrectPasscodeState() {
+        shakePips()
+        resetView()
     }
 }
 
 private extension PasscodeViewController {
     
-    func setBackgroundGif() {
-//        imageView.image = UIImage.gif(name: "water")
+    func updateView() {
+        guard let config = self.config, let view = self.view else {
+            return
+        }
+        label.text = config.label
+        imageView.image = config.backgroundImage
+        view.backgroundColor = config.backgroundColour
+        progressStackView.configure(config.numberOfDigits)
     }
     
     func authenticateViaFaceOrTouchID() {
@@ -53,6 +84,15 @@ private extension PasscodeViewController {
     
     func unlockApp() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func shakePips() {
+        progressStackView.shake()
+    }
+    
+    func resetView() {
+        progressStackView.updateProgress(0)
+        passcode = ""
     }
 }
 
@@ -91,11 +131,13 @@ extension PasscodeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard let config = config else { return }
+        
         if indexPath.row == 11 {
             //delete button pressed
-            if progress > 0 {
-                progress -= 1
-                progressStackView.updateProgress(progress)
+            if passcode.count > 0 {
+                passcode.removeLast()
+                progressStackView.updateProgress(passcode.count)
             }
             return
         }
@@ -106,9 +148,13 @@ extension PasscodeViewController: UICollectionViewDelegate {
             return
         }
         
-        if progress < MAX_DIGITS_ALLOWED {
-            progress += 1
-            progressStackView.updateProgress(progress)
+        if passcode.count < config.numberOfDigits {
+            passcode.append(String(indexPath.row + 1))
+            progressStackView.updateProgress(passcode.count)
+        }
+        
+        if passcode.count == config.numberOfDigits {
+            delegate?.passcodeController(self, didEnterPasscode: passcode)
         }
     }
     
@@ -122,5 +168,27 @@ extension PasscodeViewController: UICollectionViewDelegateFlowLayout
     {
         return CGSize(width: collectionView.frame.size.width/4,
                       height: collectionView.frame.size.height/4.5)
+    }
+}
+
+extension UIView {
+    
+    func shake() {
+        let shake = CABasicAnimation(keyPath: "position")
+        let xDelta = CGFloat(5)
+        shake.duration = 0.08
+        shake.repeatCount = 3
+        shake.autoreverses = true
+        
+        let from_point = CGPoint(x: self.center.x - xDelta, y: self.center.y)
+        let from_value = NSValue(cgPoint: from_point)
+        
+        let to_point = CGPoint(x: self.center.x + xDelta, y: self.center.y)
+        let to_value = NSValue(cgPoint: to_point)
+        
+        shake.fromValue = from_value
+        shake.toValue = to_value
+        shake.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        self.layer.add(shake, forKey: "position")
     }
 }
