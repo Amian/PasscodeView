@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'AMPasscodeView'  
-s.version          = '0.0.1'  
+s.version          = '0.2'  
 s.summary          = 'A simple customisable passcode view' 
 s.homepage         = 'https://github.com/Amian/PasscodeView'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }

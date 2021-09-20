@@ -8,7 +8,7 @@
 import UIKit
 import LocalAuthentication
 
-protocol PasscodeViewControllerDelegate {
+public protocol PasscodeViewControllerDelegate {
     func passcodeController(_ controller: PasscodeViewController, didEnterPasscode passcode: String)
 }
 
@@ -19,7 +19,7 @@ private struct PasscodeViewConfig {
     var backgroundImage: UIImage?
 }
 
-class PasscodeViewController: UIViewController {
+public class PasscodeViewController: UIViewController {
         
     private let CELL_IDENTIFIER = "PasscodeCell"
     private var config: PasscodeViewConfig?
@@ -31,22 +31,21 @@ class PasscodeViewController: UIViewController {
     @IBOutlet private var progressStackView: ProgressIndicatorStackView!
     @IBOutlet private var label: UILabel!
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: CELL_IDENTIFIER, bundle: nil), forCellWithReuseIdentifier: CELL_IDENTIFIER)
         progressStackView.updateProgress(0)
-//        configure()
     }
     
     // MARK: Public methods
     
-    func configure(with label: String = "Enter Passcode", numberOfDigits: Int = 4, backgroundColour: UIColor = .white, backgroundImage: UIImage? = nil, delegate: PasscodeViewControllerDelegate? = nil) {
+    public func configure(with label: String = "Enter Passcode", numberOfDigits: Int = 4, backgroundColour: UIColor = .white, backgroundImage: UIImage? = nil, delegate: PasscodeViewControllerDelegate? = nil) {
         self.config = PasscodeViewConfig(label: label, numberOfDigits: numberOfDigits, backgroundColour: backgroundColour, backgroundImage: backgroundImage)
         self.delegate = delegate
         updateView()
     }
     
-    func showIncorrectPasscodeState() {
+    public func showIncorrectPasscodeState() {
         shakePips()
         resetView()
     }
@@ -98,15 +97,15 @@ private extension PasscodeViewController {
 
 extension PasscodeViewController: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIER, for: indexPath) as! PasscodeCell
         
         let row = indexPath.row
@@ -129,7 +128,7 @@ extension PasscodeViewController: UICollectionViewDataSource {
 
 extension PasscodeViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let config = config else { return }
         
@@ -164,7 +163,7 @@ extension PasscodeViewController: UICollectionViewDelegateFlowLayout
 {
     //MARK: - UICollectionViewDelegateFlowLayout
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         return CGSize(width: collectionView.frame.size.width/4,
                       height: collectionView.frame.size.height/4.5)

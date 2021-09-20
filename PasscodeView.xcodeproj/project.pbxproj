@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F7031BB026F7F626004687C5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F7031BAF26F7F626004687C5 /* LICENSE */; };
+		F7031BB426F92E56004687C5 /* AMPasscodeView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F7031BB326F92E56004687C5 /* AMPasscodeView.podspec */; };
 		F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */; };
 		F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */; };
 		F781ABFC26CD4E12001B84D7 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		F7031BAF26F7F626004687C5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F7031BB326F92E56004687C5 /* AMPasscodeView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AMPasscodeView.podspec; sourceTree = "<group>"; };
 		F781ABF626CD4E12001B84D7 /* PasscodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeViewController.xib; sourceTree = "<group>"; };
 		F781ABF726CD4E12001B84D7 /* PasscodeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeCell.xib; sourceTree = "<group>"; };
 		F781ABF826CD4E12001B84D7 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		F7D501F226C574DB00E268A5 = {
 			isa = PBXGroup;
 			children = (
+				F7031BB326F92E56004687C5 /* AMPasscodeView.podspec */,
 				F7031BAF26F7F626004687C5 /* LICENSE */,
 				F7D501FD26C574DB00E268A5 /* PasscodeView */,
 				F7D5021426C574DE00E268A5 /* PasscodeViewTests */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7031BB026F7F626004687C5 /* LICENSE in Resources */,
+				F7031BB426F92E56004687C5 /* AMPasscodeView.podspec in Resources */,
 				F781ABFA26CD4E12001B84D7 /* PasscodeViewController.xib in Resources */,
 				F7D5020B26C574DE00E268A5 /* LaunchScreen.storyboard in Resources */,
 				F781ABFB26CD4E12001B84D7 /* PasscodeCell.xib in Resources */,
